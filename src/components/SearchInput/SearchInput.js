@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS } from '../../constants';
+import { COLORS, QUERIES } from '../../constants';
 
 import VisuallyHidden from '../VisuallyHidden';
 import Icon from '../Icon';
@@ -41,7 +41,7 @@ const SearchIcon = styled(Icon)`
   bottom: 0;
   margin: auto;
   width: 16px;
-  height: 16px;
+  height: 16px; 
 `;
 
 export default SearchInput;
