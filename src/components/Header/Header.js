@@ -71,6 +71,7 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px ${flexSpacing};
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: scroll;
 
   @media ${QUERIES.tabletAndDown} {
     align-items: center;
@@ -79,11 +80,19 @@ const MainHeader = styled.div`
 
 const Side = styled.div`
   flex: 1;
+  margin-right: auto;
 `;
 
 const Nav = styled.nav`
+  flex: 5;
   display: flex;
-  gap: 48px;
+  justify-content: space-between;
+  gap: clamp(
+    3rem,
+    14vw - 7rem,
+    4rem
+  );
+;
   margin: 0px 48px;
 
   @media ${QUERIES.tabletAndDown} {
