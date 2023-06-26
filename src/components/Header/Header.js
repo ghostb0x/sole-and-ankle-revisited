@@ -15,9 +15,9 @@ const Header = () => {
     <header>
       <SuperHeader />
       <MainHeader>
-        <Side>
+        <LeftSide>
           <Logo />
-        </Side>
+        </LeftSide>
         <Nav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -26,7 +26,7 @@ const Header = () => {
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
-        <Side>
+        <RightSide>
           <MobileNav>
             <UnstyledButton>
               <Icon
@@ -53,7 +53,7 @@ const Header = () => {
               />
             </UnstyledButton>
           </MobileNav>
-        </Side>
+        </RightSide>
       </MainHeader>
 
       <MobileMenu
@@ -71,28 +71,28 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px ${flexSpacing};
   border-bottom: 1px solid ${COLORS.gray[300]};
-  overflow-x: scroll;
+  overflow-x: auto;
 
   @media ${QUERIES.tabletAndDown} {
     align-items: center;
   }
 `;
 
-const Side = styled.div`
-  flex: 1;
+const LeftSide = styled.div`
+  flex: 2 1 0;
+  margin-right: auto;
+`;
+
+const RightSide = styled.div`
+  flex: 2 100 0;
   margin-right: auto;
 `;
 
 const Nav = styled.nav`
-  flex: 5;
+  flex: 6 1 0;
   display: flex;
   justify-content: space-between;
-  gap: clamp(
-    3rem,
-    14vw - 7rem,
-    4rem
-  );
-;
+  gap: clamp(1rem, 14vw - 4rem, 3rem);
   margin: 0px 48px;
 
   @media ${QUERIES.tabletAndDown} {
