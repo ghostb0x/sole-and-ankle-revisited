@@ -34,7 +34,7 @@ const MobileDecoration = styled.div`
   @media ${QUERIES.tabletAndDown} {
     display: block;
     height: 3px;
-    background-color: ${COLORS.gray[900]};
+    background-color: var(--colors-gray-900);
   }
 `;
 
@@ -43,8 +43,8 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 24px;
   font-size: 0.875rem;
-  color: ${COLORS.gray[300]};
-  background-color: ${COLORS.gray[900]};
+  color: var(--colors-gray-300);
+  background-color: var(--colors-gray-900);
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 `;
 
 const MarketingMessage = styled.span`
-  color: ${COLORS.white};
+  color: var(--colors-white);
   margin-right: auto;
 `;
 

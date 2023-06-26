@@ -19,7 +19,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
             <Icon
               id="close"
               strokeWidth={2}
-              color={COLORS.gray[900]}
+              color={'var(--colors-gray-900)'}
               size={24}
             />
           </UnstyledButton>
@@ -83,13 +83,13 @@ const Nav = styled.nav`
 const NavLink = styled.a`
   text-decoration: none;
   text-transform: uppercase;
-  color: ${COLORS.gray[900]};
+  color: var(--colors-gray-900);
   font-size: calc((18 / 16) * 1rem);
   font-weight: ${WEIGHTS.medium};
   margin: 11px 0;
 
   &:first-of-type {
-    color: ${COLORS.secondary}
+    color: var(--colors-secondary)
   }
 `;
 
@@ -101,7 +101,7 @@ const Footer = styled.footer`
 
 const FooterLink = styled.a`
   text-decoration: none;
-  color: ${COLORS.gray[700]};
+  color: var(--colors-gray-700);
   font-size: calc((14 / 16) * 1rem);
   margin: 7px 0; 
 `;

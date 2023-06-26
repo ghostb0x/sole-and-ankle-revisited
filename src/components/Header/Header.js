@@ -32,7 +32,7 @@ const Header = () => {
               <Icon
                 id="shopping-bag"
                 strokeWidth={2}
-                color={COLORS.gray[900]}
+                color={'var(--colors-gray-900)'}
                 size={24}
               />
             </UnstyledButton>
@@ -40,7 +40,7 @@ const Header = () => {
               <Icon
                 id="search"
                 strokeWidth={2}
-                color={COLORS.gray[900]}
+                color={'var(--colors-gray-900)'}
                 size={24}
               />
             </UnstyledButton>
@@ -48,7 +48,7 @@ const Header = () => {
               <Icon
                 id="menu"
                 strokeWidth={2}
-                color={COLORS.gray[900]}
+                color={'var(--colors-gray-900)'}
                 size={24}
               />
             </UnstyledButton>
@@ -70,7 +70,7 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px ${flexSpacing};
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--colors-gray-300);
   overflow-x: auto;
 
   @media ${QUERIES.tabletAndDown} {
@@ -104,11 +104,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
+  color: var(--colors-gray-900);
   font-weight: ${WEIGHTS.medium};
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--colors-secondary);
   }
 `;
 

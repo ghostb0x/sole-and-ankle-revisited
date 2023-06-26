@@ -14,7 +14,7 @@ const ShoeIndex = ({ sortId, setSortId }) => {
     <Wrapper>
       <MainColumn>
         <Header>
-          <diV>
+          <div>
             <MobileBreadcrumbs>
               <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
               <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
@@ -23,7 +23,7 @@ const ShoeIndex = ({ sortId, setSortId }) => {
               </Breadcrumbs.Crumb>
             </MobileBreadcrumbs>
             <Title>Running</Title>
-          </diV>
+          </div>
 
           <StyledSelect
             label="Sort"
@@ -79,7 +79,6 @@ const Header = styled.header`
   @media ${QUERIES.tabletAndDown} {
     align-items: flex-end;
   }
-
 `;
 
 const Title = styled.h2`
