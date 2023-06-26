@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-
-import { COLORS, QUERIES } from '../../constants';
-
 import VisuallyHidden from '../VisuallyHidden';
 import Icon from '../Icon';
 

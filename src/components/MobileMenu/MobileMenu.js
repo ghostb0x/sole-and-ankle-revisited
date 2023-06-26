@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
-import { COLORS, WEIGHTS } from '../../constants';
+import { WEIGHTS } from '../../constants';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
@@ -13,16 +13,17 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
       isOpen={isOpen}
       onDismiss={onDismiss}
     >
-      <Content>
+      <Content aria-label="Menu">
         <ButtonWrapper>
-          <UnstyledButton onClick={() => onDismiss()}>
+          <CloseButton onClick={() => onDismiss()}>
+            <VisuallyHidden>Dismiss Menu</VisuallyHidden>
             <Icon
               id="close"
               strokeWidth={2}
               color={'var(--colors-gray-900)'}
               size={24}
             />
-          </UnstyledButton>
+          </CloseButton>
         </ButtonWrapper>
 
         <Nav>
@@ -52,7 +53,7 @@ const Overlay = styled(DialogOverlay)`
   left: 0;
   right: 0;
   bottom: 0;
-  background: hsl(0deg 0% 0% / 0.5);
+  background: hsl(220 5% 40% / 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,9 +70,15 @@ const Content = styled(DialogContent)`
 `;
 
 const ButtonWrapper = styled.div`
-  width: 24px;
-  margin: 26px 16px;
-  margin-left: auto;
+  width: 100%;
+  position: relative;
+`;
+
+const CloseButton = styled(UnstyledButton)`
+  padding: 16px;
+  position: absolute;
+  top: 10px;
+  right: 0px;
 `;
 
 const Nav = styled.nav`
@@ -89,7 +96,7 @@ const NavLink = styled.a`
   margin: 11px 0;
 
   &:first-of-type {
-    color: var(--colors-secondary)
+    color: var(--colors-secondary);
   }
 `;
 
@@ -103,5 +110,5 @@ const FooterLink = styled.a`
   text-decoration: none;
   color: var(--colors-gray-700);
   font-size: calc((14 / 16) * 1rem);
-  margin: 7px 0; 
+  margin: 7px 0;
 `;

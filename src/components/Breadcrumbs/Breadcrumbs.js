@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { COLORS } from '../../constants';
 
 const Breadcrumbs = ({ children, className }) => {
   return <Wrapper className={className}>{children}</Wrapper>;
